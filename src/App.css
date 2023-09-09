@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(209, 33%, 12%);
+  --color-brand-2: hsl(0, 0%, 59%);
+  --color-brand-3: hsl(354, 100%, 66%);
+  --color-brand-4: hsl(0, 0%, 100%);
+
+  --color-site-1: hsl(223, 100%, 88%);
+  --color-site-2: hsl(223, 87%, 63%);
+
+  --font-libre-franklin: "Libre Franklin", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-libre-franklin);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 2rem 4rem;
+}
+
+header {
+  text-align: center;
+}
+
+.Logo {
+  display: block;
+  width: 10rem;
+  margin: 0 auto 4rem;
+}
+
+.Logo > img {
+  width: 100%;
+}
+
+.HeaderTitle {
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: var(--color-brand-2);
+  margin-bottom: 2rem;
+}
+
+.HeaderTitle > span {
+  color: var(--color-brand-1);
+  font-weight: 700;
+}
+
+.HeaderPara {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: var(--color-brand-1);
+  font-weight: 600;
+}
+
+label {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.emailError::after {
+  content: "Please provide a valid email address";
+  position: absolute;
+  bottom: -1.8rem;
+  left: 2rem;
+  font-size: 1.5rem;
+  color: var(--color-brand-3);
+  font-weight: 600;
+}
+
+#email {
+  width: 100%;
+  padding: 1.5rem 0 1.5rem 2rem;
+  margin: 0 auto;
+  border: 2px solid var(--color-site-1);
+  border-radius: 2.8rem;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+#email:active,
+#email:focus {
+  background-color: transparent;
+}
+
+.FormBtn {
+  display: block;
+  width: 100%;
+  margin: 0 auto 2rem;
+  padding: 1.5rem 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-brand-4);
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 2.8rem;
+  background-color: var(--color-site-2);
+  box-shadow: 5px 5px 10px var(--color-site-1);
+  transition: filter 0.2s ease-in-out;
+}
+
+.FormBtn:hover {
+  filter: brightness(140%);
+}
+
+main {
+  margin-top: 10rem;
+}
+
+.Chart {
+  width: 100%;
+}
+
+.Chart > img {
+  width: 100%;
+}
+
+.SocialIconsBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.SocialIconBox-Icon {
+  color: var(--color-site-2);
+  border: 1px solid var(--color-site-1);
+  font-size: 4rem;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.SocialIconBox-Icon:hover {
+  background-color: var(--color-site-2);
+  color: var(--color-brand-4);
+}
+
+.Copyright {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+}
+
+@media screen and (min-width: 700px) {
+  header,
+  main {
+    max-width: 80rem;
+    margin: auto;
+  }
+
+  main {
+    margin-top: 5rem;
+  }
+
+  form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 30%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
